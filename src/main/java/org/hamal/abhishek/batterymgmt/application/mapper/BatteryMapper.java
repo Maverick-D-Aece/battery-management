@@ -16,7 +16,7 @@ public interface BatteryMapper {
 
     @Mapping(target = "id", expression = "java(java.util.UUID.randomUUID())")
     @Mapping(target = "postCode", expression = "java(Integer.parseInt(dto.postCode()))")
-    Battery toDomainList(BatteryDto dto);
+    Battery toDomain(BatteryDto dto);
 
     List<Battery> toDomainList(List<BatteryDto> dtoList);
 
